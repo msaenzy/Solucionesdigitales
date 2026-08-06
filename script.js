@@ -1,5 +1,79 @@
 /* Spondylus Standalone Interactive JavaScript */
 
+const caseDetails = {
+  medico: {
+    title: 'Clínica Dental OdontoSalud',
+    category: 'Médico & Dental',
+    city: 'Guayaquil, Ecuador',
+    metric: '+185% Citas Directas por WhatsApp',
+    description: 'Transformación total de presencia digital para clínica odontológica especializada. Se implementó una página con arquitectura de velocidad optimizada, catálogo interactivo de tratamientos (limpieza, carillas, ortodoncia invisible) y llamado a la acción prioritario directo al canal de atención al paciente por WhatsApp.',
+    results: [
+      'Incremento de citas agendadas desde móviles en 185%',
+      'Tiempo medio de carga de 0.7 segundos en conexión 4G',
+      'Integración con Google Maps para ubicación en tiempo real'
+    ]
+  },
+  cafeteria: {
+    title: 'Bistró & Café Artesanal',
+    category: 'Cafetería & Gastronomía',
+    city: 'Quito, Ecuador',
+    metric: '+140% Reservas de Mesas',
+    description: 'Desarrollo de menú digital atractivo y rápido con fotos optimizadas de alta calidad. Se integró botón directo de reservas de mesa y pedidos para llevar a través de WhatsApp.',
+    results: [
+      'Aumento significativo en pedidos directos sin comisiones',
+      'Experiencia fluida para clientes escaneando código QR en local',
+      'Diseño mobile-first adaptado para teléfonos de gama media y alta'
+    ]
+  },
+  consultoria: {
+    title: 'Estudio Jurídico & Contable',
+    category: 'Consultoría & Servicios',
+    city: 'Cuenca, Ecuador',
+    metric: '+220% Consultas Corporativas',
+    description: 'Landing Page institucional orientada a proyectar máxima autoridad legal y contable. Incluye secciones claras de áreas de práctica, equipo profesional y botón directo de asesoría inicial por WhatsApp.',
+    results: [
+      'Duplicación de contactos corporativos calificados',
+      'Posicionamiento prioritario en búsquedas locales en Ecuador',
+      'Alta tasa de retención de usuarios navegando por servicios'
+    ]
+  }
+};
+
+function openCaseModal(key) {
+  const modal = document.getElementById('caseModal');
+  const modalContent = document.getElementById('modalContent');
+  const data = caseDetails[key];
+
+  if (modal && modalContent && data) {
+    modalContent.innerHTML = `
+      <div class="space-y-4">
+        <div class="flex items-center justify-between border-b pb-3">
+          <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-[#37526E]/10 text-[#37526E]">${data.category}</span>
+          <span class="text-xs font-mono font-bold text-[#C5A059]">${data.city}</span>
+        </div>
+        <h3 class="font-display font-extrabold text-2xl text-[#2D3436]">${data.title}</h3>
+        <p class="text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200 inline-block">${data.metric}</p>
+        <p class="text-xs text-[#2D3436]/80 leading-relaxed">${data.description}</p>
+        <div class="space-y-2 pt-2 border-t">
+          <h4 class="font-bold text-xs text-[#2D3436]">Logros Clave del Proyecto:</h4>
+          <ul class="space-y-1 text-xs text-[#2D3436]/80">
+            ${data.results.map(r => `<li class="flex items-center gap-2">✓ ${r}</li>`).join('')}
+          </ul>
+        </div>
+        <a href="https://wa.me/593958876957?text=Quiero%20un%20proyecto%20similar%20a%20${encodeURIComponent(data.title)}" target="_blank" class="block text-center w-full py-3 mt-4 rounded-full font-bold text-xs bg-[#37526E] text-white shadow-md hover:bg-[#2A3E54]">
+          Quiero una Landing Page Como Esta
+        </a>
+      </div>
+    `;
+    modal.classList.remove('hidden');
+  }
+}
+
+function closeCaseModal() {
+  const modal = document.getElementById('caseModal');
+  if (modal) modal.classList.add('hidden');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_NUMBER = '593958876957';
 
@@ -31,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       caseCards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = 'block';
+          card.style.display = 'flex';
         } else {
           card.style.display = 'none';
         }

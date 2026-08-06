@@ -5,19 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spondylus - Landing Pages de Alta Conversión en Ecuador</title>
   <meta name="description" content="Diseño de Landing Pages profesionales, ultra rápidas y enfocadas en conversión directa a WhatsApp en Ecuador." />
+  
+  <!-- Favicon / Logo Icon -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-[#E0E5EC] text-[#2D3436] antialiased">
+<body class="bg-[#E0E5EC] text-[#2D3436] antialiased selection:bg-[#37526E] selection:text-white">
 
   <!-- HEADER NAVBAR -->
   <header class="sticky top-0 z-50 bg-[#E0E5EC]/90 backdrop-blur-md border-b border-[#4A6A8C]/20 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- LOGO (Tu logo.svg) -->
-      <a href="#" class="flex items-center gap-3">
-        <img src="logo.svg" alt="Spondylus Logo" class="h-10 w-auto" />
+      <!-- LOGO (Usa tu logo.svg) -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="logo.svg" alt="Spondylus Logo" class="h-10 w-auto transition-transform group-hover:scale-105" />
       </a>
 
       <!-- Desktop Nav Links -->
@@ -35,27 +46,28 @@
         href="https://wa.me/593958876957?text=Hola%20Spondylus,%20quisiera%20más%20información%20sobre%20sus%20Landing%20Pages"
         target="_blank"
         rel="noopener noreferrer"
-        class="cta-shimmer hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs bg-[#37526E] hover:bg-[#2A3E54] text-white shadow-md transition-transform hover:-translate-y-0.5"
+        class="cta-shimmer hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-xs bg-[#37526E] hover:bg-[#2A3E54] text-white shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0"
       >
         <span>Chatear por WhatsApp</span>
+        <svg class="w-4 h-4 text-[#C5A059]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </a>
 
       <!-- Mobile Menu Toggle -->
-      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-[#2D3436] bg-white border border-[#4A6A8C]/20">
+      <button id="mobileMenuBtn" aria-label="Abrir Menú" class="md:hidden p-2 rounded-xl text-[#2D3436] bg-white border border-[#4A6A8C]/20 shadow-xs">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
     </div>
 
     <!-- Mobile Dropdown Nav -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[#F2F5F9] border-b border-[#4A6A8C]/20 px-4 py-4 space-y-3 font-medium text-sm">
+    <div id="mobileMenu" class="hidden md:hidden bg-[#F2F5F9] border-b border-[#4A6A8C]/20 px-6 py-5 space-y-3 font-semibold text-sm">
       <a href="#inicio" class="block py-1 hover:text-[#37526E]">Inicio</a>
       <a href="#beneficios" class="block py-1 hover:text-[#37526E]">Por Qué Spondylus</a>
       <a href="#casos" class="block py-1 hover:text-[#37526E]">Casos de Éxito</a>
       <a href="#planes" class="block py-1 hover:text-[#37526E]">Planes</a>
       <a href="#simulador" class="block py-1 hover:text-[#37526E]">Simulador</a>
       <a href="#contacto" class="block py-1 hover:text-[#37526E]">Contacto</a>
-      <a href="https://wa.me/593958876957" target="_blank" class="block w-full text-center py-2.5 mt-2 rounded-full font-bold bg-[#37526E] text-white">
-        WhatsApp +593 0958876957
+      <a href="https://wa.me/593958876957" target="_blank" class="block w-full text-center py-3 mt-2 rounded-full font-bold bg-[#37526E] text-white shadow-sm">
+        Chatear por WhatsApp
       </a>
     </div>
   </header>
@@ -66,9 +78,9 @@
       
       <!-- Left Content -->
       <div class="lg:col-span-7 space-y-6 text-left">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#C5A059]/40 text-[#2D3436] text-xs font-mono font-bold shadow-xs">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Desarrollo Web en Ecuador</span>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#C5A059]/40 text-[#2D3436] text-xs font-mono font-bold shadow-xs">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Desarrollo Web de Alta Conversión en Ecuador</span>
         </div>
 
         <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-[#2D3436] leading-[1.15] tracking-tight">
@@ -86,7 +98,7 @@
             class="cta-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-[#37526E] hover:bg-[#2A3E54] text-white shadow-lg transition-transform hover:-translate-y-0.5"
           >
             <span>Iniciar Proyecto por WhatsApp</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <svg class="w-4 h-4 text-[#C5A059]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
           </a>
           <a
             href="#casos"
@@ -97,7 +109,7 @@
         </div>
       </div>
 
-      <!-- Right Card Preview (Imagen & Presencia) -->
+      <!-- Right Window Preview -->
       <div class="lg:col-span-5">
         <div class="rounded-3xl bg-white border border-[#4A6A8C]/20 p-6 sm:p-8 shadow-xl relative space-y-6">
           <div class="flex items-center justify-between border-b border-[#4A6A8C]/15 pb-4">
@@ -105,30 +117,22 @@
             <span class="text-xs font-mono bg-[#E0E5EC] px-3 py-1 rounded-full font-bold text-[#37526E]">Ecuador 24/7</span>
           </div>
 
-          <!-- Badge Destacada / Requerimiento del usuario -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="rounded-xl border p-4 bg-[#F2F5F9] border-[#4A6A8C]/30 text-[#4A6A8C] flex flex-col justify-between">
-              <span class="text-[10px] font-mono font-bold uppercase tracking-wider">
-                Presencia Digital y Profesional
+          <!-- Dos recuadros de texto solicitados -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div class="rounded-xl border p-4 bg-[#F2F5F9] border-[#4A6A8C]/30 text-[#4A6A8C] flex flex-col justify-center items-center text-center">
+              <span class="font-extrabold text-sm sm:text-base leading-snug">
+                Presencia Digital Profesional
               </span>
-              <span class="font-extrabold text-xs sm:text-sm mt-2 text-[#2D3436]">Siempre Web 24/7</span>
             </div>
-            <div class="rounded-xl border p-4 bg-white border-[#C5A059]/40 text-[#2D3436] flex flex-col justify-between">
-              <span class="text-[10px] font-mono font-bold uppercase text-[#C5A059] tracking-wider">
-                Garantía & Seguridad
+            <div class="rounded-xl border p-4 bg-white border-[#C5A059]/40 text-[#2D3436] flex flex-col justify-center items-center text-center">
+              <span class="font-extrabold text-sm sm:text-base leading-snug">
+                Generando confianza con tus clientes
               </span>
-              <span class="font-extrabold text-xs sm:text-sm mt-2">En confianza con tus clientes</span>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-[#E0E5EC]/60 border border-[#4A6A8C]/15 text-xs text-[#2D3436]/90 space-y-2">
-            <div class="flex items-center justify-between font-bold">
-              <span>🚀 Velocidad Móvil: 99/100</span>
-              <span class="text-emerald-600">✓ Optimizado</span>
-            </div>
-            <p class="text-[11px] text-[#2D3436]/70 leading-relaxed">
-              Tus clientes no esperarán. Garantizamos cargas en menos de 1 segundo en redes 4G/5G ecuatorianas.
-            </p>
+          <div class="h-11 w-full rounded-xl flex items-center justify-center font-bold text-xs text-white bg-[#37526E] shadow-sm">
+            Sitio Web de Alta Conversión En Vivo
           </div>
         </div>
       </div>
@@ -177,7 +181,7 @@
     </div>
   </section>
 
-  <!-- CASOS DE EXITO (GALERIA POR CATEGORIA) -->
+  <!-- CASOS DE EXITO (GALERIA POR CATEGORIA & MODAL DINAMICO) -->
   <section id="casos" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-[#4A6A8C]/15 bg-[#E0E5EC]">
     <div class="max-w-7xl mx-auto space-y-12">
       <div class="text-center max-w-3xl mx-auto space-y-4">
@@ -204,56 +208,70 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Case 1 -->
-        <div data-category="medico" class="case-card rounded-3xl p-7 bg-white border border-[#4A6A8C]/20 shadow-sm space-y-5">
-          <div class="flex items-center justify-between">
-            <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-[#37526E]/10 text-[#37526E]">Médico & Dental</span>
-            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">+185% Citas</span>
+        <div data-category="medico" class="case-card gallery-card rounded-3xl p-7 bg-white border border-[#4A6A8C]/20 shadow-sm space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-[#37526E]/10 text-[#37526E]">Médico & Dental</span>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">+185% Citas</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-[#2D3436]">Clínica Dental OdontoSalud</h3>
+            <p class="text-xs text-[#2D3436]/80 leading-relaxed">
+              Landing Page clínica con catálogo de especialidades, agendamiento a 1 clic por WhatsApp y ubicación en Google Maps.
+            </p>
           </div>
-          <h3 class="font-display font-bold text-xl text-[#2D3436]">Clínica Dental OdontoSalud</h3>
-          <p class="text-xs text-[#2D3436]/80 leading-relaxed">
-            Landing Page clínica con catálogo de especialidades, agendamiento a 1 clic por WhatsApp y ubicación en Google Maps.
-          </p>
-          <div class="pt-3 border-t border-[#4A6A8C]/15 flex items-center justify-between text-xs font-bold">
+          <div class="pt-4 border-t border-[#4A6A8C]/15 flex items-center justify-between text-xs font-bold">
             <span class="text-[#37526E]">Guayaquil, Ecuador</span>
-            <a href="https://wa.me/593958876957" target="_blank" class="text-[#C5A059] hover:underline">Consultar Proyecto →</a>
+            <button onclick="openCaseModal('medico')" class="text-[#C5A059] hover:underline cursor-pointer">Ver Detalles →</button>
           </div>
         </div>
 
         <!-- Case 2 -->
-        <div data-category="cafeteria" class="case-card rounded-3xl p-7 bg-white border border-[#4A6A8C]/20 shadow-sm space-y-5">
-          <div class="flex items-center justify-between">
-            <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-amber-500/10 text-amber-800">Cafetería & Gastronomía</span>
-            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">+140% Reservas</span>
+        <div data-category="cafeteria" class="case-card gallery-card rounded-3xl p-7 bg-white border border-[#4A6A8C]/20 shadow-sm space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-amber-500/10 text-amber-800">Cafetería & Gastronomía</span>
+              <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">+140% Reservas</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-[#2D3436]">Bistró & Café Artesanal</h3>
+            <p class="text-xs text-[#2D3436]/80 leading-relaxed">
+              Menú digital interactivo, fotografiado con alta estética, botón de reserva directa de mesa por WhatsApp y mapa interactivo.
+            </p>
           </div>
-          <h3 class="font-display font-bold text-xl text-[#2D3436]">Bistró & Café Artesanal</h3>
-          <p class="text-xs text-[#2D3436]/80 leading-relaxed">
-            Menú digital interactivo, fotografiado con alta estética, botón de reserva directa de mesa por WhatsApp y mapa interactivo.
-          </p>
-          <div class="pt-3 border-t border-[#4A6A8C]/15 flex items-center justify-between text-xs font-bold">
+          <div class="pt-4 border-t border-[#4A6A8C]/15 flex items-center justify-between text-xs font-bold">
             <span class="text-[#37526E]">Quito, Ecuador</span>
-            <a href="https://wa.me/593958876957" target="_blank" class="text-[#C5A059] hover:underline">Consultar Proyecto →</a>
+            <button onclick="openCaseModal('cafeteria')" class="text-[#C5A059] hover:underline cursor-pointer">Ver Detalles →</button>
           </div>
         </div>
 
         <!-- Case 3 -->
-        <div data-category="consultoria" class="case-card rounded-3xl p-7 bg-white border border-[#4A6A8C]/20 shadow-sm space-y-5">
-          <div class="flex items-center justify-between">
-            <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-800">Consultoría & Servicios</span>
-            <span class="text-xs font-bold text-cyan-700 bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200">+220% Leads</span>
+        <div data-category="consultoria" class="case-card gallery-card rounded-3xl p-7 bg-white border border-[#4A6A8C]/20 shadow-sm space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-800">Consultoría & Servicios</span>
+              <span class="text-xs font-bold text-cyan-700 bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200">+220% Leads</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-[#2D3436]">Estudio Jurídico & Contable</h3>
+            <p class="text-xs text-[#2D3436]/80 leading-relaxed">
+              Presentación de autoridad profesional, desglose claro de áreas legales y canal de contacto prioritario para empresas.
+            </p>
           </div>
-          <h3 class="font-display font-bold text-xl text-[#2D3436]">Estudio Jurídico & Contable</h3>
-          <p class="text-xs text-[#2D3436]/80 leading-relaxed">
-            Presentación de autoridad profesional, desglose claro de áreas legales y canal de contacto prioritario para empresas.
-          </p>
-          <div class="pt-3 border-t border-[#4A6A8C]/15 flex items-center justify-between text-xs font-bold">
+          <div class="pt-4 border-t border-[#4A6A8C]/15 flex items-center justify-between text-xs font-bold">
             <span class="text-[#37526E]">Cuenca, Ecuador</span>
-            <a href="https://wa.me/593958876957" target="_blank" class="text-[#C5A059] hover:underline">Consultar Proyecto →</a>
+            <button onclick="openCaseModal('consultoria')" class="text-[#C5A059] hover:underline cursor-pointer">Ver Detalles →</button>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- MODAL DINAMICO PARA CASOS DE EXITO -->
+  <div id="caseModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 space-y-6 relative shadow-2xl border border-[#4A6A8C]/20">
+      <button onclick="closeCaseModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#E0E5EC] flex items-center justify-center font-bold text-sm text-[#2D3436] hover:bg-slate-200">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
 
   <!-- PLANES DE INVERSION (SIN NUMERACIONES) -->
   <section id="planes" class="py-20 px-4 sm:px-6 lg:px-8 border-t border-[#4A6A8C]/15 bg-[#E0E5EC]">
@@ -286,7 +304,7 @@
               <li class="flex items-center gap-2">✓ Carga ultrarrápida optimizada</li>
             </ul>
           </div>
-          <a href="https://wa.me/593958876957?text=Quiero%20el%20Plan%20Landing%20Page%20Esencial" target="_blank" class="w-full text-center py-3 rounded-full font-bold text-xs bg-white border border-[#4A6A8C]/30 text-[#2D3436] hover:bg-[#37526E] hover:text-white transition-colors">
+          <a href="https://wa.me/593958876957?text=Quiero%20el%20Plan%20Landing%20Page%20Esencial" target="_blank" class="w-full text-center py-3.5 rounded-full font-bold text-xs bg-white border border-[#4A6A8C]/30 text-[#2D3436] hover:bg-[#37526E] hover:text-white transition-colors">
             Quiero el Plan Esencial
           </a>
         </div>
@@ -332,7 +350,7 @@
               <li class="flex items-center gap-2">✓ SEO Local Avanzado + Google Maps</li>
             </ul>
           </div>
-          <a href="https://wa.me/593958876957?text=Quiero%20el%20Plan%20Multi-Sección%20Elite" target="_blank" class="w-full text-center py-3 rounded-full font-bold text-xs bg-white border border-[#4A6A8C]/30 text-[#2D3436] hover:bg-[#37526E] hover:text-white transition-colors">
+          <a href="https://wa.me/593958876957?text=Quiero%20el%20Plan%20Multi-Sección%20Elite" target="_blank" class="w-full text-center py-3.5 rounded-full font-bold text-xs bg-white border border-[#4A6A8C]/30 text-[#2D3436] hover:bg-[#37526E] hover:text-white transition-colors">
             Quiero el Plan Elite
           </a>
         </div>
@@ -352,7 +370,7 @@
           Prueba cómo tus clientes te escribirán por WhatsApp
         </h2>
         <p class="text-base text-[#2D3436]/80">
-          Selecciona tu sector para ver la estructura exacta del mensaje directo pre-configurado que recibirá tu WhatsApp (+593 0958876957).
+          Selecciona tu sector para ver la estructura exacta del mensaje directo pre-configurado que recibirá tu cuenta de WhatsApp.
         </p>
 
         <!-- Selector Tabs -->
@@ -386,7 +404,7 @@
         <!-- Preview Textarea -->
         <div class="space-y-2 pt-2">
           <label class="block text-xs font-mono font-bold text-[#37526E] uppercase tracking-wider">
-            Mensaje Pre-configurado que llegará a tu WhatsApp (+593 0958876957):
+            Mensaje Pre-configurado que llegará a tu WhatsApp:
           </label>
           <textarea id="simMessage" rows="5" readonly class="w-full rounded-2xl p-4 bg-[#F2F5F9] border border-[#4A6A8C]/20 text-xs font-mono text-[#2D3436] resize-none focus:outline-none">👋 ¡Hola! Vengo desde su Landing Page.
 
@@ -400,7 +418,7 @@
         <!-- Actions -->
         <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
           <button id="simSendBtn" class="cta-shimmer w-full sm:w-auto px-8 py-3.5 rounded-full font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-md">
-            Enviar este Mensaje a WhatsApp (+593 0958876957)
+            Enviar este Mensaje a WhatsApp
           </button>
           <button id="simCopyBtn" class="w-full sm:w-auto px-6 py-3.5 rounded-full font-bold text-xs bg-[#E0E5EC] hover:bg-[#F2F5F9] text-[#2D3436] border border-[#4A6A8C]/20">
             Copiar Mensaje
@@ -419,7 +437,7 @@
           Comienza tu Proyecto Hoy Mismo
         </h2>
         <p class="text-base text-[#2D3436]/80">
-          Completa los datos y conéctate directamente con nuestro equipo de desarrollo vía WhatsApp (+593 0958876957).
+          Completa los datos y conéctate directamente con nuestro equipo de desarrollo vía WhatsApp.
         </p>
       </div>
 
@@ -456,7 +474,7 @@
         </div>
 
         <button type="submit" class="cta-shimmer w-full py-4 rounded-full font-bold text-sm bg-[#37526E] text-white hover:bg-[#2A3E54] shadow-md transition-transform hover:-translate-y-0.5">
-          Enviar Mensaje Directo a WhatsApp (+593 0958876957) →
+          Enviar Mensaje Directo a WhatsApp →
         </button>
       </form>
     </div>
@@ -476,7 +494,7 @@
       </p>
 
       <a href="https://wa.me/593958876957" target="_blank" class="text-xs font-bold text-[#37526E] hover:underline">
-        WhatsApp: +593 0958876957
+        Chatear por WhatsApp
       </a>
     </div>
   </footer>
