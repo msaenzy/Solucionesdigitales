@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bruma: #E0E5EC;
+  --color-bruma-card: #F2F5F9;
+  --color-cobalto: #4A6A8C;
+  --color-cobalto-dark: #37526E;
+  --color-cobalto-light: #6787A9;
+  --color-cobalto-subtle: #D8E2EC;
+  --color-oro: #C5A059;
+  --color-oro-dark: #A3813B;
+  --color-oro-light: #D8C082;
+  --color-oro-subtle: #F5F0E4;
+  --color-grafito: #2D3436;
+  --color-grafito-muted: #535C5E;
+  --color-grafito-light: #737E81;
+
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+@layer base {
+  html, body {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #E0E5EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A6A8C;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #37526E;
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #2D3436;
+}
+
+/* Shell ridge motif - Spondylus signature for light mode */
+.shell-ridges-light {
+  background-image: repeating-conic-gradient(
+    from 200deg at 15% 20%,
+    rgba(74, 106, 140, 0.06) 0deg 2deg,
+    transparent 2deg 9deg
+  );
+}
+
+.shell-ridges-dark {
+  background-image: repeating-conic-gradient(
+    from 200deg at 15% 20%,
+    rgba(212, 175, 55, 0.08) 0deg 2deg,
+    transparent 2deg 9deg
+  );
+}
+
+/* Nacre text gradient effect */
+.nacre-text-light {
+  background: linear-gradient(
+    110deg,
+    #4A6A8C 0%,
+    #37526E 30%,
+    #D4AF37 60%,
+    #4A6A8C 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: nacre-shift 7s ease-in-out infinite;
+}
+
+.nacre-text-dark {
+  background: linear-gradient(
+    110deg,
+    #6787A9 0%,
+    #D4AF37 40%,
+    #E4C65D 70%,
+    #6787A9 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: nacre-shift 7s ease-in-out infinite;
+}
+
+@keyframes nacre-shift {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-a {
+  animation: float-slow 6s ease-in-out infinite;
+}
+.float-b {
+  animation: float-slower 5s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+/* Shimmer animation for CTA buttons */
+.cta-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.cta-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  translate: -120% 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transition: translate 0.7s ease;
+}
+.cta-shimmer:hover::before {
+  translate: 120% 0;
+}
