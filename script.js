@@ -27,8 +27,7 @@ const caseDetails = {
   },
   consultoria: {
     title: 'Estudio Jurídico & Contable',
-    category: 'Consultoría & Servicios',
-    city: 'Cuenca, Ecuador',
+    category: 'Cuenca, Ecuador',
     metric: '+220% Consultas Corporativas',
     description: 'Landing Page institucional orientada a proyectar máxima autoridad legal y contable. Incluye secciones claras de áreas de práctica, equipo profesional y botón directo de asesoría inicial por WhatsApp.',
     results: [
@@ -47,16 +46,16 @@ function openCaseModal(key) {
   if (modal && modalContent && data) {
     modalContent.innerHTML = `
       <div class="space-y-4">
-        <div class="flex items-center justify-between border-b pb-3">
+        <div class="flex items-center justify-between border-b pb-3 border-gray-200">
           <span class="text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full bg-[#37526E]/10 text-[#37526E]">${data.category}</span>
           <span class="text-xs font-mono font-bold text-[#C5A059]">${data.city}</span>
         </div>
-        <h3 class="font-display font-extrabold text-2xl text-[#2D3436]">${data.title}</h3>
+        <h3 class="font-display font-extrabold text-2xl">${data.title}</h3>
         <p class="text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200 inline-block">${data.metric}</p>
-        <p class="text-xs text-[#2D3436]/80 leading-relaxed">${data.description}</p>
-        <div class="space-y-2 pt-2 border-t">
-          <h4 class="font-bold text-xs text-[#2D3436]">Logros Clave del Proyecto:</h4>
-          <ul class="space-y-1 text-xs text-[#2D3436]/80">
+        <p class="text-xs opacity-90 leading-relaxed">${data.description}</p>
+        <div class="space-y-2 pt-2 border-t border-gray-200">
+          <h4 class="font-bold text-xs">Logros Clave del Proyecto:</h4>
+          <ul class="space-y-1 text-xs opacity-85">
             ${data.results.map(r => `<li class="flex items-center gap-2">✓ ${r}</li>`).join('')}
           </ul>
         </div>
@@ -74,8 +73,60 @@ function closeCaseModal() {
   if (modal) modal.classList.add('hidden');
 }
 
+function selectPlanForContact(planTitle) {
+  const planSelect = document.getElementById('formPlan');
+  if (planSelect) {
+    planSelect.value = planTitle;
+  }
+  const contactSection = document.getElementById('contacto');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_NUMBER = '593958876957';
+
+  // Theme Switcher Logic
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeToggleMobileBtn = document.getElementById('themeToggleMobileBtn');
+  const themeIconSun = document.querySelectorAll('.theme-icon-sun');
+  const themeIconMoon = document.querySelectorAll('.theme-icon-moon');
+  const themeLabel = document.querySelectorAll('.theme-label');
+
+  function setTheme(isDark) {
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+      themeIconSun.forEach(el => el.classList.add('hidden'));
+      themeIconMoon.forEach(el => el.classList.remove('hidden'));
+      themeLabel.forEach(el => el.textContent = 'Modo Noche');
+      localStorage.setItem('spondylus-theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      themeIconSun.forEach(el => el.classList.remove('hidden'));
+      themeIconMoon.forEach(el => el.classList.add('hidden'));
+      themeLabel.forEach(el => el.textContent = 'Versión Día');
+      localStorage.setItem('spondylus-theme', 'light');
+    }
+  }
+
+  // Load saved theme preference
+  const savedTheme = localStorage.getItem('spondylus-theme');
+  setTheme(savedTheme === 'dark');
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      setTheme(!isDark);
+    });
+  }
+
+  if (themeToggleMobileBtn) {
+    themeToggleMobileBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      setTheme(!isDark);
+    });
+  }
 
   // Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');

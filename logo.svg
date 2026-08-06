@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
-  <g transform="translate(8, 6)">
-    <!-- Spondylus Shell Contour Icon -->
-    <path d="M24 4C14 4 6 12 6 22C6 29 11 35 18 38V42C18 43.1 18.9 44 20 44H28C29.1 44 30 43.1 30 42V38C37 35 42 29 42 22C42 12 34 4 24 4Z" fill="#37526E"/>
-    <path d="M24 8C31.7 8 38 14.3 38 22C38 27.5 34 32.2 29 33.5L24 16L19 33.5C14 32.2 10 27.5 10 22C10 14.3 16.3 8 24 8Z" fill="#C5A059"/>
-    <path d="M24 16L26.5 33H21.5L24 16Z" fill="#FFFFFF"/>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="10" fill="#37526E"/>
+  <g stroke="#ffffff" stroke-width="1.8" opacity="0.95">
+    <path d="M6 34 C6 20, 14 12, 30 10" stroke-linecap="round" />
+    <path d="M6 34 C8 22, 16 16, 30 10" stroke="#C5A059" opacity="0.9" stroke-linecap="round" />
+    <path d="M6 34 C10 24, 18 20, 30 10" stroke-linecap="round" />
+    <path d="M6 34 C12 26, 20 24, 30 10" stroke="#C5A059" opacity="0.6" stroke-linecap="round" />
   </g>
-  <!-- Brand Text -->
-  <text x="62" y="31" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="21" letter-spacing="1.8" fill="#2D3436">SPONDYLUS</text>
-  <text x="63" y="43" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="8.5" letter-spacing="2.8" fill="#C5A059">LANDING PAGES ECUADOR</text>
+  <circle cx="6" cy="34" r="3" fill="#C5A059" />
 </svg>
