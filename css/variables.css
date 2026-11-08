@@ -1,0 +1,100 @@
+/* variables.css — Dirección de arte "Sand & Digital" (con capa Soft Ocean).
+   Paleta costera: arena, marfil, piedra, espuma, turquesa, océano y navy profundo. */
+:root {
+  /* — paleta base (HEX documentados en docs/DESIGN-ANALYSIS.md) — */
+  --ivory: #F6F1E8;        /* Warm Ivory — fondo 60% */
+  --sand: #E8DCC8;         /* Sand Beige — superficies cálidas */
+  --sand-deep: #D6C5A8;    /* arena húmeda */
+  --stone: #A89C8A;        /* Warm Stone — texto secundario / líneas */
+  --seafoam: #C9DFD5;      /* Seafoam Green — aire, chips */
+  --turquoise: #5E9C99;    /* Muted Turquoise — acento */
+  --ocean: #7FA8C2;        /* Soft Ocean Blue */
+  --navy: #0E2A44;         /* Deep Ocean Navy — tipografía y bloques */
+  --abyss: #071827;        /* fondo nocturno */
+  --ink: #1D2B36;          /* texto */
+
+  /* color (tokens semánticos) */
+  --color-bg: var(--ivory);
+  --color-surface: #FBF8F2;
+  --color-surface-2: var(--sand);
+  --color-text: var(--ink);
+  --color-heading: var(--navy);
+  --color-primary: var(--navy);
+  --color-on-primary: #F6F1E8;
+  --color-secondary: var(--turquoise);
+  --color-accent: #3F7F86;           /* turquesa con contraste AA sobre marfil */
+  --color-border: rgba(14, 42, 68, .12);
+  --color-muted: #5F6B72;
+  --glass: rgba(255, 252, 246, .55);
+  --glass-strong: rgba(255, 252, 246, .78);
+  --glass-border: rgba(255, 255, 255, .7);
+  --wa: #1FA855;
+
+  /* type */
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Cinzel", Georgia, serif; /* reservado para wordmark y numerales */
+  --text-xs: .75rem;
+  --text-sm: .875rem;
+  --text-md: 1rem;
+  --text-lg: clamp(1.0625rem, .98rem + .35vw, 1.25rem);
+  --text-xl: clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem);
+  --text-section: clamp(2.2rem, 1.5rem + 3vw, 4rem);
+  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 6.25rem);
+  --leading-tight: 1.02;
+  --leading-body: 1.65;
+  --tracking-display: -.015em;
+  --tracking-label: .22em;
+
+  /* space */
+  --space-xs: .5rem;
+  --space-sm: .875rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6.5rem;
+  --section-y: clamp(4.5rem, 3rem + 6vw, 9rem);
+
+  /* shape — formas de canto rodado */
+  --radius-sm: 12px;
+  --radius-md: 22px;
+  --radius-lg: 36px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(14, 42, 68, .06);
+  --shadow-md: 0 18px 40px -22px rgba(14, 42, 68, .28);
+  --shadow-lg: 0 40px 80px -40px rgba(14, 42, 68, .45);
+  --border-w: 1px;
+
+  /* layout */
+  --container: 1240px;
+  --gutter: clamp(1rem, .6rem + 2vw, 2.5rem);
+  --grid-columns: 12;
+  --header-h: 76px;
+
+  /* motion — suave, como marea */
+  --dur-reveal: .95s;
+  --dur-nav: .45s;
+  --ease-out: cubic-bezier(.22, .8, .24, 1);
+  --ease-wave: cubic-bezier(.45, .05, .25, 1);
+  --reveal-distance: 22px;
+}
+
+/* — Modo Noche: océano profundo con bioluminiscencia — */
+:root[data-theme="dark"] {
+  --color-bg: var(--abyss);
+  --color-surface: #0C2234;
+  --color-surface-2: #0B2031;
+  --color-text: #D7E2E6;
+  --color-heading: #F1ECE2;
+  --color-primary: #CFE6DD;
+  --color-on-primary: #071827;
+  --color-secondary: #7FC4BC;
+  --color-accent: #8FD0C6;
+  --color-border: rgba(201, 223, 213, .14);
+  --color-muted: #93A6AE;
+  --glass: rgba(16, 44, 66, .5);
+  --glass-strong: rgba(16, 44, 66, .78);
+  --glass-border: rgba(201, 223, 213, .14);
+  --shadow-md: 0 18px 40px -22px rgba(0, 0, 0, .6);
+  --shadow-lg: 0 40px 80px -40px rgba(0, 0, 0, .7);
+}
